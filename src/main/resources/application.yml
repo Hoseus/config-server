@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          search-paths:
+            - "{profile}"
+          clone-on-start: true
+          refresh-rate: 300
+          ignore-local-ssh-settings: true
+          private-key: |
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABDST8nqiM
+            meJ2yjV08JJHn7AAAAEAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIKk2qGIqSlRNXd9c
+            P4wq6bY/PLa7srAJ0MQvRdL4PixnAAAAoEB8+L4CkKYDWG+pUny4XZgb0DrtJpd5BXSclX
+            VgbNO7Jt21pPJ+/B5Ynzlb+zwym0nngfqTbD+eanZo135GPjJIraFY4n74qfBYBm2/wCfN
+            AMeoXtgzP7diyeoSsooLrWHwd8T6TA0gGDiyUifbikEDtbFhH8CveBeNykyBFpnOsKO3Lg
+            C4ZlvS5tC9xL+1VS260zcUgkrIfHY0SOy1qHg=
+            -----END OPENSSH PRIVATE KEY-----
